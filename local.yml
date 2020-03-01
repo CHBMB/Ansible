@@ -1,0 +1,12 @@
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Install packages
+    apt: name={{item}}
+    with_items:
+      - flatpak
+      - gir1.2-gmenu-3.0
+      - gnome-menus
+      - gnome-shell-extensions
+      - snapd
+      - mc
